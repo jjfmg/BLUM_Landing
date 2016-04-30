@@ -33,7 +33,7 @@ body{
 }
 
 .info(){
-	margin: 25px auto;
+	margin: 20px auto;
 	width: 80%;
 }
 
@@ -58,7 +58,7 @@ body{
 	color: @white;
 	display: block;
 	text-align: center;
-	padding: 40px;
+	padding: 55px 0;
 	overflow: auto;
 }
 
@@ -104,7 +104,7 @@ body{
 			.learnmore{
 				.button;
 			}
-			#join{
+			.join{
 				.button;
 			}
 		}
@@ -113,10 +113,10 @@ body{
 
 //BANNER 1 MEDIA BREAK
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 650px){
 	#banner1{
 		.herogroup{
-			top: 5%;
+			top: 10%;
 			h1{
 				font-size: 5em;
 			}
@@ -130,39 +130,7 @@ body{
 	}
 }
 
-//NAV BAR STYLINGS
-.navbar{
-	border-radius: 0;
-	border: none;
-	padding: 0;
-	margin: 0;
-	color: @white;
-	#logo{
-		float: left;
-		margin: 3px 15px;
-	}
-	#tabs{
-		float: right;
-		margin: 10px 0;
-		li{
-			display: inline;
-			font-size: 16px;
-			margin: 0 15px;
-			cursor: pointer;
-			//border: 2px solid @white; //dev purposes only
-			&:hover{
-				border-bottom: 2px solid @white;
-			}
-		}
-	}
-}
 
-//AFFIX
-
-.affix {
-      top: 0;
-      width: 100%;
-  }
 
 //BANNER INFO1 STYLINGS
 #banner_info1{
@@ -172,7 +140,11 @@ body{
 		.midway;
 		.row{
 			.info_image{
-				//border: 2px solid @white; //dev
+				img{
+					//IMAGE ICON DIMENSIONS
+					height: 120px;
+					width: 250px;
+				}
 			}
 			.info{
 				p{
@@ -194,7 +166,12 @@ body{
 		.row{
 			.info_image{
 				//border: 2px solid @white; //dev
-				margin-bottom: 10px;
+				margin: 30px 0 10px 0;
+				//IMAGE ICON DIMENSIONS
+				img{
+					height: 250px;
+					width: 250px;
+				}
 			}
 			.info{
 				a{
@@ -221,7 +198,13 @@ body{
 		.midway;
 		.row{
 			.info_image{
-
+				padding: 20px;
+				//border: 2px solid white;
+				img{
+					//IMAGE ICON DIMENSIONS
+					height: 250px;
+					width: 250px;
+				}
 			}
 			.info{
 				a{
@@ -241,27 +224,52 @@ body{
 
 //BANNER INFO4 STYLINGS
 #banner_info4{
-	.banner_info;
-	color: #000000;
-	#involve{
-		h1{
-			margin: 20px 0;
+	.join_row{
+		height: 225px;
+		text-align: center;
+		cursor: pointer;
+		&:hover{
+			.overlay{
+				.o_info{
+					h3{
+						opacity: 1;
+						transition: .5s all;
+					}
+				}
+			}
 		}
-		p{
-			.info;
-			width: 70%;
+		.overlay{
+			background: rgba(0,0,0,0.6);
+			height: inherit;
+			width: inherit;
+			color: white;
+			.o_info{
+				//border: 2px solid white;
+				position: relative;
+				top: 30%;
+				h1{
+					margin: 0;
+					font-size: 50px;
+				}
+				h3{
+					opacity: 0;
+					margin: 10px;
+					padding: 10px;
+				}
+			}
 		}
 	}
-	.icon_container{
-		//border: 2px solid black; //dev
-		#discourse{
-			height: 120px;
-			width: 170px
-		}
-		#slack{
-			height: 150px;
-			width: 150px;
-		}
+	#articles{
+		background: url('../imgs/articles.jpg');
+		background-size: cover;
+	}
+	#projects{
+		background: url('../imgs/projects.jpeg');
+		background-size: cover;
+	}
+	#donate{
+		background: url('../imgs/donate.jpg');
+		background-size: cover;
 	}
 }
 
@@ -290,7 +298,7 @@ body{
 //FOOTER STYLINGS 
 .contact{
 	padding: 10px 5px;
-	background: rgba(0,0,0,.9);
+	background: black;
 	color: white;
 	overflow: auto;
 	.container{
