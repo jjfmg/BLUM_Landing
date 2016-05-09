@@ -279,3 +279,7 @@ body {
     display: none;
   }
 }
+a.div {
+  text-decoration: none;
+  display: block;
+}
